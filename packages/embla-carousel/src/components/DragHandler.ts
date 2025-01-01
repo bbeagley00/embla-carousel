@@ -61,9 +61,9 @@ export function DragHandler(
   const initEvents = EventStore()
   const dragEvents = EventStore()
   const goToNextThreshold = Limit(50, 225).constrain(percentOfView.measure(20))
-  const snapForceBoost = { mouse: 300, touch: 400 }
-  const freeForceBoost = { mouse: 500, touch: 600 }
-  const baseSpeed = dragFree ? 43 : 25
+  const snapForceBoost = { mouse: 300, touch: 1000 }
+  const freeForceBoost = { mouse: 500, touch: 1000 }
+  const baseSpeed = dragFree ? 43 : 50
 
   let isMoving = false
   let startScroll = 0
